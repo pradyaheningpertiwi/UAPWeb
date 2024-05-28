@@ -1,34 +1,50 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-image: url('../img/login.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
     margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #2b0000;
 }
 
-.container {
-    max-width: 800px;
-    margin: 50px auto;
-    background: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-h1, h2 {
+.header {
     text-align: center;
-    color: #333;
-}
-
-form {
     margin-bottom: 20px;
 }
 
-form input, form textarea {
+h1, h2 {
+    margin: 10px 0;
+}
+
+.container {
+    max-width: 400px;
     width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.container:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+form input {
+    width: 95%;
     padding: 10px;
     margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 1px solid #ffffff;
+}
+
+form input:focus {
+    border-color: #007BFF;
+    outline: none;
 }
 
 form button {
@@ -37,28 +53,23 @@ form button {
     background-color: #007BFF;
     color: #fff;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
 }
 
 form button:hover {
     background-color: #0056b3;
+    transform: scale(1.05);
 }
 
-.schedule ul {
-    list-style-type: none;
-    padding: 0;
+a {
+    display: block;
+    text-align: center;
+    color: #007BFF;
+    text-decoration: none;
+    margin-top: 10px;
 }
 
-.schedule ul li {
-    background: #007BFF;
-    color: white;
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 4px;
-}
-
-.contact form textarea {
-    height: 100px;
+a:hover {
+    color: #0056b3;
 }
