@@ -42,27 +42,50 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['contact'])) {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistem Event Organizer</title>
-    <link rel="stylesheet" href="css/style.css">
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-
-<div class="container">
-    <h1>Event Organizer</h1>
-
-    <h2>Pendaftaran Peserta</h2>
-    <form id="registrationForm" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-        <input type="text" id="name" name="name" placeholder="Nama Lengkap" required>
-        <input type="email" id="email" name="email" placeholder="Email" required>
-        <input type="tel" id="phone" name="phone" placeholder="Nomor Telepon" required>
-        <button type="submit" name="register">Daftar</button>
-    </form>
-    <a style href="login.php">Register</a>
-</div>
-
+	<br/>
+	<br/>
+	<center><h2>SILAHKAN REGISTRASI</h2></center>	
+	<br/>
+	<div class="login">
+	<br/>
+		<form action="login.php" method="post" onSubmit="return validasi()">
+			<div>
+				<label>nama:</label>
+				<input type="text" name="username" id="username" />
+			</div>
+			<div>
+				<label>email:</label>
+				<input type="password" name="password" id="password" />
+			</div>	
+			<div>
+				<label>phone:</label>
+				<input type="phone" name="phone" id="phone" />
+			</div>			
+			<div>
+				<input type="submit" value="Daftar" class="tombol">
+			</div>
+		</form>
+		<a href="login.php">Register</a>
+	</div>
 </body>
+
+<script type="text/javascript">
+	function validasi() {
+		var username = document.getElementById("username").value;
+		var password = document.getElementById("password").value;
+		var phone = document.getElementById("phone").value;		
+		if (username != "" && password!="" && phone!="") {
+			return true;
+		}else{
+			alert('Username dan Password harus di isi !');
+			return false;
+		}
+	}
+</script>
 </html>
